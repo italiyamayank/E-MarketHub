@@ -32,16 +32,16 @@ const Header = () => {
 
   return (
     <div className="">
-      <div className="flex bg-black text-white h-10 items-center justify-center gap-2 flex-wrap ">
+      <div className="flex bg-black text-white items-center justify-center  gap-2  ">
         <p className="text-center">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
         </p>
-        <p className="cursor-pointer">
+        <p className="cursor-pointer mr-3">
           <Link to={"#"}>ShopNow</Link>
         </p>
       </div>
       <div className="flex items-center justify-around p-4 border-b border-b-[#00000041] flex-wrap ">
-        <h2 className="font-bold">
+        <h2 className="font-bold max-sm:hidden">
           <Link to={"/"}>E-MarketHub</Link>
         </h2>
         <div className="max-lg:hidden ">
@@ -55,7 +55,7 @@ const Header = () => {
             <li className="cursor-pointer">
               <Link to={"about"}>About</Link>
             </li>
-            {!isAuthenticated && (
+            {!!isAuthenticated && (
               <li className="cursor-pointer">
                 <NavLink to={"login"}>Login</NavLink>
               </li>
@@ -89,7 +89,7 @@ const Header = () => {
               <img src="/src/assets/icons/Add to card.png" alt="cart" />
             </Link>
           </button>
-          {isAuthenticated && (
+          {!isAuthenticated && (
             <div className="relative inline-block text-left" ref={dropdownRef}>
               <button onClick={toggleDropdown} className="">
                 <img

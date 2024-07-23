@@ -74,9 +74,9 @@ const Manu = () => {
           </div>
 
           <div className=" flex justify-center  w-[80%] ">
-            <div className="w-[892px] h-[334] text-white bg-black px-12 rounded-md ">
+            <div className="w-[892px] h-[334] text-white bg-black px-12 rounded-md max-sm:px-1 ">
               <div className="flex justify-between">
-                <div className="flex flex-col gap-7 justify-center w-[42%]">
+                <div className="flex flex-col gap-7 justify-center w-[42%] max-sm:w-auto">
                   <span className="flex items-center gap-7">
                     <img src="/src/assets/img/Apple.png" alt="apple" />
                     <div>iPhone 14 Series</div>
@@ -780,7 +780,7 @@ const Manu = () => {
               <p className="text-5xl font-semibold">New Arrival</p>
             </div>
           </div>
-          <div className="flex gap-8 mt-14">
+          <div className="flex gap-8 mt-14 justify-center">
             <div className="w-[570px] h-[600px] bg-black  rounded-md flex pt-[70px] text-white">
               <img
                 className="relative flex justify-center"
@@ -852,13 +852,11 @@ const Manu = () => {
         </div>
       </section>
       <div className=" sticky flex justify-end">
-        <a href="#tops" className="">
           <img
             className=""
             src="/src/assets/icons/Fill with Up Arrow.png"
             alt=""
           />
-        </a>
       </div>
     </div>
   );

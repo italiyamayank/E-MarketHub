@@ -46,11 +46,9 @@ const Product_Details = () => {
 
   return (
     <div>
-      <div className="py-16 px-20">
+      <div className="py-16 px-20 max-sm:px-0">
         <div className="">
-          <div className="">
-            <div className="">Account / Gaming / Havic HV G-92 Gamepad</div>
-          </div>
+            <div className="max-sm:hidden">Account / Gaming / Havic HV G-92 Gamepad</div>
           {product_Details.map((product, index) => (
             <div key={index} className="flex flex-col md:flex-row p-4">
               <div className=" md:w-1/2 p-4">
@@ -120,7 +118,7 @@ const Product_Details = () => {
                       <button className="w-5 h-5 bg-gray-400 border border-gray-400 rounded-full"></button>
                     </div>
                   </div>
-                  <div className="flex gap-3 items-center">
+                  <div className="flex gap-3 items-center max-sm:flex-wrap">
                     <span className="font-bold">Size:</span>
                     <div className="flex space-x-2">
                       <button className="py-1 px-3 border border-gray-400 rounded">
@@ -142,7 +140,7 @@ const Product_Details = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-5">
-                  {isAuthenticated ? (
+                  {!isAuthenticated ? (
                     <Link to={"/cart"}>
                       <button
                         className="bg-black text-white py-2 px-4 rounded"

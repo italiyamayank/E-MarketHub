@@ -88,7 +88,7 @@ export const ContextProvider = ({ children }) => {
   };
 
   const toggleWishlist = (product) => {
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       if (wishlist.find((item) => item.id == product.id)) {
         removeFromWishlist(product.id);
         console.log("remove in the wishlist", product);
@@ -106,7 +106,7 @@ export const ContextProvider = ({ children }) => {
   };
 
   const addToCart = (product, quantity = 1) => {
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       setCart((prevCart) => {
         axios.post("http://localhost:3001/cart", cart);
         const existingProduct = prevCart.find((item) => item.id === product.id);
@@ -129,7 +129,7 @@ export const ContextProvider = ({ children }) => {
   };
 
   // const addToCart = (product, quantity = 1) => {
-  //   if (isAuthenticated) {
+  //   if (!isAuthenticated) {
   //     setCart((prevCart) => {
   //       const existingProduct = prevCart.find((item) => item.id === product.id);
   //       if (existingProduct) {
@@ -160,7 +160,7 @@ export const ContextProvider = ({ children }) => {
   );
 
   const CheckOut = () => {
-    if (isAuthenticated) {
+    if (!isAuthenticated) {
       setcheckout(cart);
     }
   };

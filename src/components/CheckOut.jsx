@@ -12,8 +12,8 @@ const Checkout = () => {
           Account / My Account / Product/ View Cart/ CheckOut
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:space-x-8">
-        <div className="md:w-[60%] bg-white p-6 rounded-lg shadow-md h-fit">
+      <div className="flex flex-col md:flex-row md:space-x-8 justify-center">
+        {/* <div className="md:w-[60%] bg-white p-6 rounded-lg shadow-md h-fit">
           <h2 className="text-3xl font-semibold  mb-6">Billing Details</h2>
           <form>
             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -100,7 +100,7 @@ const Checkout = () => {
               </label>
             </div>
           </form>
-        </div>
+        </div> */}
         <div className="md:w-[40%] h-fit bg-white p-6 rounded-lg shadow-md mt-8 md:mt-0">
           <div className="">
             <h2 className="text-2xl font-bold mb-6">Your Order</h2>
